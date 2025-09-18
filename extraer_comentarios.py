@@ -17,12 +17,18 @@ SOLO_PRIMER_POST = False
 
 # LISTA DE URLs A PROCESAR
 URLS_A_PROCESAR = [
-     # TIKTOK - Links adicionales
+     # Links generales pauta QR Facebook & Tik Tok
     "https://www.tiktok.com/@alpinacol/video/7545906205563112722?_r=1&_t=ZS-8zodFWYH3fr",
     "https://www.tiktok.com/@alpinacol/video/7545906164911934736?_r=1&_t=ZS-8zodC7ZCI5a",
     "https://www.tiktok.com/@alpinacol/video/7545906204736900359?_r=1&_t=ZS-8zod8bavifI",
     "https://www.tiktok.com/@alpinacol/video/7545906203931757831?_r=1&_t=ZS-8zod3GQAOL2",
     "https://www.tiktok.com/@alpinacol/video/7545783917819858183?_r=1&_t=ZS-8zoczvlumrX",
+    "https://www.facebook.com/share/v/1AECsaNCAg/",
+    "https://www.facebook.com/share/r/19tQheWQPf/",
+    "https://www.facebook.com/share/r/1CJf8Y6ZQ3/",
+    "https://www.facebook.com/share/r/16dwuwzUGy/",
+    "https://www.facebook.com/share/r/17Pta7RTLQ/",
+     # Links adicionales Pauta 2025
     "https://www.instagram.com/p/DOJ1IfZgMkK/",
     "https://www.instagram.com/p/DOKy5xrgAWJ/",
     "https://www.instagram.com/p/DOKy5uTgKUO/",
@@ -468,6 +474,7 @@ def run_extraction():
 
 if __name__ == "__main__":
     run_extraction()
+
 
 
 
