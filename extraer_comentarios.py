@@ -126,12 +126,6 @@ URLS_A_PROCESAR = [
     "https://www.facebook.com/?feed_demo_ad=120231001991270528&h=AQBk2nsBgbrXm5ZalKI",
     "https://www.facebook.com/?feed_demo_ad=120230701719800528&h=AQD-HB1JfE4fL-6ZYwg",
     "https://www.facebook.com/?feed_demo_ad=120230701719790528&h=AQBopnumRdAuGco2UJo",
-    # TIKTOK - Parte 1
-    "https://www.tiktok.com/@alpinacol/video/7542657663943838983?_r=1&_t=ZS-8zoRtzUAc5A",
-    "https://www.tiktok.com/@alpinacol/video/7541457975207136530?_r=1&_t=ZS-8zoRifAKgbK",
-    "https://www.tiktok.com/@alpinacol/video/7547743186593008916?_r=1&_t=ZS-8zoReoFAugR",
-    "https://www.tiktok.com/@alpinacol/video/7548118828790664456?_r=1&_t=ZS-8zoRa8RYbDu",
-    "https://www.tiktok.com/@alpinacol/video/7547746657144720660?_r=1&_t=ZS-8zoRVpEExWM"
      # Continuación URLS_A_PROCESAR - Links 101-200
     # INSTAGRAM - Parte 2 (continuación)
     "https://www.instagram.com/p/DMweWN-AdyD/",
@@ -792,6 +786,7 @@ def run_extraction():
 
 if __name__ == "__main__":
     run_extraction()
+
 
 
 
