@@ -16,7 +16,7 @@ APIFY_TOKEN = os.environ.get("APIFY_TOKEN")
 SOLO_PRIMER_POST = False
 
 # LISTA DE URLs A PROCESAR
- URLS_A_PROCESAR = [
+URLS_A_PROCESAR = [
      # TIKTOK - Links adicionales
     "https://www.tiktok.com/@alpinacol/video/7545906205563112722?_r=1&_t=ZS-8zodFWYH3fr",
     "https://www.tiktok.com/@alpinacol/video/7545906164911934736?_r=1&_t=ZS-8zodC7ZCI5a",
@@ -792,6 +792,7 @@ def run_extraction():
 
 if __name__ == "__main__":
     run_extraction()
+
 
 
 
