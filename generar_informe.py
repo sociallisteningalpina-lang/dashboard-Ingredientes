@@ -62,42 +62,42 @@ def run_report_generation():
     
     # <<<--- INICIA LA NUEVA FUNCIÓN DE CLASIFICACIÓN ---<<<
     def classify_topic(comment):
-    """
-    Clasifica comentarios sobre recetas culinarias en categorías específicas.
-    Optimizado para contenido de recetas, técnicas y feedback de preparación.
-    """
-    comment_lower = str(comment).lower()
-    
-    # 1. Elogios y Opinión Positiva sobre la Receta/Resultado
-    if re.search(r'\brico\b|\bdelicioso\b|\bexcelente\b|\bbueno\b|\bmaravilloso\b|encanta|fascinan|me gusta|quiero comer|se ve (bien|delicioso|rico)|asquerosamente rico|👌|😋|🤤|muy.*rico', comment_lower):
-        return 'Elogios y Opinión Positiva'
-    
-    # 2. Crítica sobre Sabor, Textura o Resultado (Negativo)
-    if re.search(r'muy (dulce|seco|duro|salado|grasoso)|me (engorda|dio diabetes)|poco aséptico|demasiado|falta.*sabor|cancer|mucho cancer|se quemo|quedó (seco|duro)|no (me|les) gustó|horrible|muy seco', comment_lower):
-        return 'Crítica de Sabor/Textura'
-    
-    # 3. Sugerencias y Variaciones de la Receta
-    if re.search(r'le falta|yo (le cambio|le pongo|haría|sugiero)|debería|mejor con|agregar|cambiar|variación|mi versión|así queda mejor|sin.*huevo|con.*queso|menos.*para|más.*de', comment_lower):
-        return 'Sugerencias y Variaciones'
-    
-    # 4. Preguntas sobre la Receta o Técnica
-    if re.search(r'\?|\bpregunta\b|cómo|¿|duda|se puede|se debería|por qué|es correcta|funciona|se ablanda|es crudo', comment_lower):
-        return 'Preguntas sobre la Receta'
-    
-    # 5. Experiencia Personal / Anécdota
-    if re.search(r'yo (preparo|hago|hice|pese que|pensé)|mi (chef|esposo|mamá|abuela)|cuando|preparé|me paso|jajaja|😅|solo verlo|narrativa.*terror', comment_lower):
-        return 'Experiencia Personal/Anécdota'
-    
-    # 6. Comentarios sobre Ingredientes Específicos
-    if re.search(r'\bqueso\b|leche|crema|arequipe|panela|sal|cebolla|ajo|carne|huevo|maíz|arroz|leche condensada|doble crema|alpina', comment_lower):
-        return 'Comentarios sobre Ingredientes'
-    
-    # 7. Fuera de Tema / Interacciones Simples
-    if re.search(r'hola|gracias|bendiciones|amén|bb|deli|wow|super|👍|hummm|ok|no sé|puro|eso tan|queso.*queso', comment_lower) or len(comment_lower.split()) < 4:
-        return 'Fuera de Tema / Interacciones'
-    
-    return 'Otros'
-    
+        """
+        Clasifica comentarios sobre recetas culinarias en categorías específicas.
+        Optimizado para contenido de recetas, técnicas y feedback de preparación.
+        """
+        comment_lower = str(comment).lower()
+        
+        # 1. Elogios y Opinión Positiva sobre la Receta/Resultado
+        if re.search(r'\brico\b|\bdelicioso\b|\bexcelente\b|\bbueno\b|\bmaravilloso\b|encanta|fascinan|me gusta|quiero comer|se ve (bien|delicioso|rico)|asquerosamente rico|👌|😋|🤤|muy.*rico', comment_lower):
+            return 'Elogios y Opinión Positiva'
+        
+        # 2. Crítica sobre Sabor, Textura o Resultado (Negativo)
+        if re.search(r'muy (dulce|seco|duro|salado|grasoso)|me (engorda|dio diabetes)|poco aséptico|demasiado|falta.*sabor|cancer|mucho cancer|se quemo|quedó (seco|duro)|no (me|les) gustó|horrible|muy seco', comment_lower):
+            return 'Crítica de Sabor/Textura'
+        
+        # 3. Sugerencias y Variaciones de la Receta
+        if re.search(r'le falta|yo (le cambio|le pongo|haría|sugiero)|debería|mejor con|agregar|cambiar|variación|mi versión|así queda mejor|sin.*huevo|con.*queso|menos.*para|más.*de', comment_lower):
+            return 'Sugerencias y Variaciones'
+        
+        # 4. Preguntas sobre la Receta o Técnica
+        if re.search(r'\?|\bpregunta\b|cómo|¿|duda|se puede|se debería|por qué|es correcta|funciona|se ablanda|es crudo', comment_lower):
+            return 'Preguntas sobre la Receta'
+        
+        # 5. Experiencia Personal / Anécdota
+        if re.search(r'yo (preparo|hago|hice|pese que|pensé)|mi (chef|esposo|mamá|abuela)|cuando|preparé|me paso|jajaja|😅|solo verlo|narrativa.*terror', comment_lower):
+            return 'Experiencia Personal/Anécdota'
+        
+        # 6. Comentarios sobre Ingredientes Específicos
+        if re.search(r'\bqueso\b|leche|crema|arequipe|panela|sal|cebolla|ajo|carne|huevo|maíz|arroz|leche condensada|doble crema|alpina', comment_lower):
+            return 'Comentarios sobre Ingredientes'
+        
+        # 7. Fuera de Tema / Interacciones Simples
+        if re.search(r'hola|gracias|bendiciones|amén|bb|deli|wow|super|👍|hummm|ok|no sé|puro|eso tan|queso.*queso', comment_lower) or len(comment_lower.split()) < 4:
+            return 'Fuera de Tema / Interacciones'
+        
+        return 'Otros'
+        
     # <<<--- TERMINA LA NUEVA FUNCIÓN DE CLASIFICACIÓN ---<<<
 
     df_comments['tema'] = df_comments['comment_text'].apply(classify_topic)
@@ -389,6 +389,7 @@ def run_report_generation():
 
 if __name__ == "__main__":
     run_report_generation()
+
 
 
 
